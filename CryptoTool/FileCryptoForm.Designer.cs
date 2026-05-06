@@ -43,36 +43,39 @@
             // lblFile
             // 
             lblFile.AutoSize = true;
-            lblFile.Location = new Point(12, 9);
+            lblFile.Location = new Point(12, 10);
             lblFile.Name = "lblFile";
-            lblFile.Size = new Size(39, 15);
+            lblFile.Size = new Size(44, 19);
             lblFile.TabIndex = 0;
             lblFile.Text = "Файл:";
             // 
             // txtFilePath
             // 
-            txtFilePath.Location = new Point(57, 6);
+            txtFilePath.Location = new Point(57, 7);
             txtFilePath.Name = "txtFilePath";
             txtFilePath.ReadOnly = true;
-            txtFilePath.Size = new Size(450, 23);
+            txtFilePath.Size = new Size(450, 25);
             txtFilePath.TabIndex = 1;
             // 
             // btnBrowse
             // 
-            btnBrowse.Location = new Point(513, 6);
+            btnBrowse.BackColor = Color.FromArgb(224, 224, 224);
+            btnBrowse.FlatAppearance.BorderSize = 0;
+            btnBrowse.FlatStyle = FlatStyle.Flat;
+            btnBrowse.Location = new Point(513, 7);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new Size(100, 25);
+            btnBrowse.Size = new Size(100, 28);
             btnBrowse.TabIndex = 2;
             btnBrowse.Text = "Вибрати...";
-            btnBrowse.UseVisualStyleBackColor = true;
+            btnBrowse.UseVisualStyleBackColor = false;
             btnBrowse.Click += btnBrowse_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 49);
+            label1.Location = new Point(151, 50);
             label1.Name = "label1";
-            label1.Size = new Size(65, 15);
+            label1.Size = new Size(73, 19);
             label1.TabIndex = 3;
             label1.Text = "Алгоритм:";
             // 
@@ -80,64 +83,75 @@
             // 
             cmbAlgorithm.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbAlgorithm.FormattingEnabled = true;
-            cmbAlgorithm.Location = new Point(83, 46);
+            cmbAlgorithm.Location = new Point(238, 47);
             cmbAlgorithm.Name = "cmbAlgorithm";
-            cmbAlgorithm.Size = new Size(200, 23);
+            cmbAlgorithm.Size = new Size(200, 25);
             cmbAlgorithm.TabIndex = 4;
             // 
             // btnEncryptFile
             // 
-            btnEncryptFile.Location = new Point(57, 91);
+            btnEncryptFile.BackColor = Color.FromArgb(0, 120, 212);
+            btnEncryptFile.FlatAppearance.BorderSize = 0;
+            btnEncryptFile.FlatStyle = FlatStyle.Flat;
+            btnEncryptFile.ForeColor = Color.FloralWhite;
+            btnEncryptFile.Location = new Point(57, 103);
             btnEncryptFile.Name = "btnEncryptFile";
-            btnEncryptFile.Size = new Size(200, 40);
+            btnEncryptFile.Size = new Size(200, 45);
             btnEncryptFile.TabIndex = 5;
-            btnEncryptFile.Text = "Зашифрувати файл";
-            btnEncryptFile.UseVisualStyleBackColor = true;
+            btnEncryptFile.Text = "🔒Зашифрувати файл";
+            btnEncryptFile.UseVisualStyleBackColor = false;
             btnEncryptFile.Click += btnEncryptFile_Click;
             // 
             // btnDecryptFile
             // 
-            btnDecryptFile.Location = new Point(346, 91);
+            btnDecryptFile.BackColor = Color.FromArgb(0, 120, 212);
+            btnDecryptFile.FlatAppearance.BorderSize = 0;
+            btnDecryptFile.FlatStyle = FlatStyle.Flat;
+            btnDecryptFile.ForeColor = Color.FloralWhite;
+            btnDecryptFile.Location = new Point(346, 103);
             btnDecryptFile.Name = "btnDecryptFile";
-            btnDecryptFile.Size = new Size(200, 40);
+            btnDecryptFile.Size = new Size(200, 45);
             btnDecryptFile.TabIndex = 6;
-            btnDecryptFile.Text = "Розшифрувати файл";
-            btnDecryptFile.UseVisualStyleBackColor = true;
+            btnDecryptFile.Text = "🔓Розшифрувати файл";
+            btnDecryptFile.UseVisualStyleBackColor = false;
             btnDecryptFile.Click += btnDecryptFile_Click;
             // 
             // lblStatus
             // 
             lblStatus.BorderStyle = BorderStyle.FixedSingle;
-            lblStatus.Location = new Point(12, 160);
+            lblStatus.Location = new Point(12, 181);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(580, 30);
+            lblStatus.Size = new Size(580, 34);
             lblStatus.TabIndex = 7;
             lblStatus.Text = "Готово до роботи";
             lblStatus.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblInfo
             // 
-            lblInfo.Location = new Point(3, 302);
+            lblInfo.Location = new Point(12, 236);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(580, 50);
+            lblInfo.Size = new Size(564, 57);
             lblInfo.TabIndex = 8;
             lblInfo.Text = "ℹ Зашифрований файл збережеться поряд з оригіналом з розширенням .encrypted.\r\n   Для розшифрування — оберіть .encrypted файл, результат збережеться як .decrypted";
             // 
             // btnReturn
             // 
-            btnReturn.Location = new Point(496, 305);
+            btnReturn.BackColor = Color.FromArgb(224, 224, 224);
+            btnReturn.FlatAppearance.BorderSize = 0;
+            btnReturn.FlatStyle = FlatStyle.Flat;
+            btnReturn.Location = new Point(215, 344);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(126, 47);
+            btnReturn.Size = new Size(223, 53);
             btnReturn.TabIndex = 9;
             btnReturn.Text = "Повернутись на головну форму";
-            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.UseVisualStyleBackColor = false;
             btnReturn.Click += btnReturn_Click;
             // 
             // FileCryptoForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(634, 361);
+            ClientSize = new Size(634, 409);
             Controls.Add(btnReturn);
             Controls.Add(lblInfo);
             Controls.Add(lblStatus);
@@ -148,6 +162,7 @@
             Controls.Add(btnBrowse);
             Controls.Add(txtFilePath);
             Controls.Add(lblFile);
+            Font = new Font("Segoe UI", 10F);
             ForeColor = Color.DimGray;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;

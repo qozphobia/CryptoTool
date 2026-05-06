@@ -45,27 +45,27 @@
             // lblInput
             // 
             lblInput.AutoSize = true;
-            lblInput.Location = new Point(12, 24);
+            lblInput.Location = new Point(12, 27);
             lblInput.Name = "lblInput";
-            lblInput.Size = new Size(83, 15);
+            lblInput.Size = new Size(97, 19);
             lblInput.TabIndex = 0;
             lblInput.Text = "Вхідний текст:";
             // 
             // txtInput
             // 
-            txtInput.Location = new Point(12, 42);
+            txtInput.Location = new Point(12, 48);
             txtInput.Multiline = true;
             txtInput.Name = "txtInput";
             txtInput.ScrollBars = ScrollBars.Vertical;
-            txtInput.Size = new Size(640, 100);
+            txtInput.Size = new Size(640, 113);
             txtInput.TabIndex = 1;
             // 
             // lblAlgorithm
             // 
             lblAlgorithm.AutoSize = true;
-            lblAlgorithm.Location = new Point(12, 173);
+            lblAlgorithm.Location = new Point(12, 196);
             lblAlgorithm.Name = "lblAlgorithm";
-            lblAlgorithm.Size = new Size(65, 15);
+            lblAlgorithm.Size = new Size(73, 19);
             lblAlgorithm.TabIndex = 2;
             lblAlgorithm.Text = "Алгоритм:";
             // 
@@ -73,95 +73,120 @@
             // 
             cmbAlgorithm.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbAlgorithm.FormattingEnabled = true;
-            cmbAlgorithm.Location = new Point(83, 170);
+            cmbAlgorithm.Location = new Point(83, 193);
             cmbAlgorithm.Name = "cmbAlgorithm";
-            cmbAlgorithm.Size = new Size(200, 23);
+            cmbAlgorithm.Size = new Size(200, 25);
             cmbAlgorithm.TabIndex = 3;
             // 
             // btnEncrypt
             // 
-            btnEncrypt.Location = new Point(12, 201);
+            btnEncrypt.BackColor = Color.FromArgb(0, 120, 212);
+            btnEncrypt.FlatAppearance.BorderSize = 0;
+            btnEncrypt.FlatStyle = FlatStyle.Flat;
+            btnEncrypt.ForeColor = SystemColors.ButtonHighlight;
+            btnEncrypt.Location = new Point(12, 228);
             btnEncrypt.Name = "btnEncrypt";
-            btnEncrypt.Size = new Size(140, 23);
+            btnEncrypt.Size = new Size(140, 26);
             btnEncrypt.TabIndex = 4;
-            btnEncrypt.Text = "Зашифрувати";
-            btnEncrypt.UseVisualStyleBackColor = true;
+            btnEncrypt.Text = "🔒 Зашифрувати";
+            btnEncrypt.UseVisualStyleBackColor = false;
             btnEncrypt.Click += btnEncrypt_Click;
             // 
             // btnDecrypt
             // 
-            btnDecrypt.Location = new Point(158, 201);
+            btnDecrypt.BackColor = Color.FromArgb(0, 120, 212);
+            btnDecrypt.FlatAppearance.BorderSize = 0;
+            btnDecrypt.FlatStyle = FlatStyle.Flat;
+            btnDecrypt.ForeColor = SystemColors.ButtonHighlight;
+            btnDecrypt.Location = new Point(158, 228);
             btnDecrypt.Name = "btnDecrypt";
-            btnDecrypt.Size = new Size(140, 23);
+            btnDecrypt.Size = new Size(140, 26);
             btnDecrypt.TabIndex = 5;
-            btnDecrypt.Text = " Розшифрувати";
-            btnDecrypt.UseVisualStyleBackColor = true;
+            btnDecrypt.Text = "🔓 Розшифрувати";
+            btnDecrypt.UseVisualStyleBackColor = false;
             btnDecrypt.Click += btnDecrypt_Click;
             // 
             // btnHash
             // 
-            btnHash.Location = new Point(304, 201);
+            btnHash.BackColor = Color.FromArgb(0, 120, 212);
+            btnHash.FlatAppearance.BorderSize = 0;
+            btnHash.FlatStyle = FlatStyle.Flat;
+            btnHash.ForeColor = SystemColors.ButtonHighlight;
+            btnHash.Location = new Point(304, 228);
             btnHash.Name = "btnHash";
-            btnHash.Size = new Size(140, 23);
+            btnHash.Size = new Size(140, 26);
             btnHash.TabIndex = 6;
-            btnHash.Text = "Хешувати";
-            btnHash.UseVisualStyleBackColor = true;
+            btnHash.Text = "#️⃣ Хешувати";
+            btnHash.UseVisualStyleBackColor = false;
             btnHash.Click += btnHash_Click;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(450, 201);
+            btnClear.BackColor = Color.FromArgb(0, 90, 158);
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.ForeColor = Color.AliceBlue;
+            btnClear.Location = new Point(450, 228);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(140, 23);
+            btnClear.Size = new Size(140, 26);
             btnClear.TabIndex = 7;
-            btnClear.Text = "Очистити";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Text = "🗑 Очистити";
+            btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 240);
+            label1.Location = new Point(12, 272);
             label1.Name = "label1";
-            label1.Size = new Size(63, 15);
+            label1.Size = new Size(73, 19);
             label1.TabIndex = 8;
             label1.Text = "Результат:";
             // 
             // txtOutput
             // 
-            txtOutput.Location = new Point(12, 258);
+            txtOutput.Location = new Point(12, 292);
             txtOutput.Multiline = true;
             txtOutput.Name = "txtOutput";
             txtOutput.ReadOnly = true;
             txtOutput.ScrollBars = ScrollBars.Vertical;
-            txtOutput.Size = new Size(640, 100);
+            txtOutput.Size = new Size(640, 113);
             txtOutput.TabIndex = 9;
             // 
             // btnFileCrypto
             // 
-            btnFileCrypto.Location = new Point(12, 364);
+            btnFileCrypto.BackColor = Color.FromArgb(224, 224, 224);
+            btnFileCrypto.FlatAppearance.BorderSize = 0;
+            btnFileCrypto.FlatStyle = FlatStyle.Flat;
+            btnFileCrypto.ForeColor = Color.Black;
+            btnFileCrypto.Location = new Point(12, 484);
             btnFileCrypto.Name = "btnFileCrypto";
-            btnFileCrypto.Size = new Size(140, 23);
+            btnFileCrypto.Size = new Size(191, 26);
             btnFileCrypto.TabIndex = 10;
-            btnFileCrypto.Text = "Робота з файлами";
-            btnFileCrypto.UseVisualStyleBackColor = true;
+            btnFileCrypto.Text = "📁 Робота з файлами";
+            btnFileCrypto.UseVisualStyleBackColor = false;
             btnFileCrypto.Click += btnFileCrypto_Click;
             // 
             // btnBenchmark
             // 
-            btnBenchmark.Location = new Point(158, 364);
+            btnBenchmark.BackColor = Color.FromArgb(224, 224, 224);
+            btnBenchmark.FlatAppearance.BorderSize = 0;
+            btnBenchmark.FlatStyle = FlatStyle.Flat;
+            btnBenchmark.ForeColor = Color.Black;
+            btnBenchmark.Location = new Point(461, 484);
             btnBenchmark.Name = "btnBenchmark";
-            btnBenchmark.Size = new Size(151, 23);
+            btnBenchmark.Size = new Size(191, 26);
             btnBenchmark.TabIndex = 11;
-            btnBenchmark.Text = "Порівняння алгоритмів";
-            btnBenchmark.UseVisualStyleBackColor = true;
+            btnBenchmark.Text = "📊 Порівняння алгоритмів";
+            btnBenchmark.UseVisualStyleBackColor = false;
             btnBenchmark.Click += btnBenchmark_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 461);
+            BackColor = Color.FromArgb(245, 245, 247);
+            ClientSize = new Size(684, 522);
             Controls.Add(btnBenchmark);
             Controls.Add(btnFileCrypto);
             Controls.Add(txtOutput);
@@ -174,6 +199,7 @@
             Controls.Add(lblAlgorithm);
             Controls.Add(txtInput);
             Controls.Add(lblInput);
+            Font = new Font("Segoe UI", 10F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "MainForm";

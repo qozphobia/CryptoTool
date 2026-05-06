@@ -42,47 +42,55 @@
             // lblText
             // 
             lblText.AutoSize = true;
-            lblText.Location = new Point(12, 19);
+            lblText.Location = new Point(12, 22);
             lblText.Name = "lblText";
-            lblText.Size = new Size(96, 15);
+            lblText.Size = new Size(111, 19);
             lblText.TabIndex = 0;
             lblText.Text = "Тестовий рядок:";
             // 
             // txtTestData
             // 
-            txtTestData.Location = new Point(12, 37);
+            txtTestData.Location = new Point(12, 42);
             txtTestData.Multiline = true;
             txtTestData.Name = "txtTestData";
             txtTestData.ScrollBars = ScrollBars.Vertical;
-            txtTestData.Size = new Size(700, 80);
+            txtTestData.Size = new Size(700, 90);
             txtTestData.TabIndex = 1;
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(12, 123);
+            btnGenerate.BackColor = Color.FromArgb(0, 120, 212);
+            btnGenerate.FlatAppearance.BorderSize = 0;
+            btnGenerate.FlatStyle = FlatStyle.Flat;
+            btnGenerate.ForeColor = SystemColors.ButtonHighlight;
+            btnGenerate.Location = new Point(12, 139);
             btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(248, 23);
+            btnGenerate.Size = new Size(312, 26);
             btnGenerate.TabIndex = 2;
-            btnGenerate.Text = "Згенерувати випадковий (1000 символів)";
-            btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Text = "🎲 Згенерувати випадковий (1000 символів)";
+            btnGenerate.UseVisualStyleBackColor = false;
             btnGenerate.Click += btnGenerate_Click;
             // 
             // btnRunBenchmark
             // 
-            btnRunBenchmark.Location = new Point(266, 123);
+            btnRunBenchmark.BackColor = Color.FromArgb(0, 120, 212);
+            btnRunBenchmark.FlatAppearance.BorderSize = 0;
+            btnRunBenchmark.FlatStyle = FlatStyle.Flat;
+            btnRunBenchmark.ForeColor = SystemColors.ButtonHighlight;
+            btnRunBenchmark.Location = new Point(504, 139);
             btnRunBenchmark.Name = "btnRunBenchmark";
-            btnRunBenchmark.Size = new Size(208, 23);
+            btnRunBenchmark.Size = new Size(208, 26);
             btnRunBenchmark.TabIndex = 3;
             btnRunBenchmark.Text = "▶  Запустити тест";
-            btnRunBenchmark.UseVisualStyleBackColor = true;
+            btnRunBenchmark.UseVisualStyleBackColor = false;
             btnRunBenchmark.Click += btnRunBenchmark_Click;
             // 
             // lblResults
             // 
             lblResults.AutoSize = true;
-            lblResults.Location = new Point(12, 185);
+            lblResults.Location = new Point(12, 210);
             lblResults.Name = "lblResults";
-            lblResults.Size = new Size(68, 21);
+            lblResults.Size = new Size(76, 23);
             lblResults.TabIndex = 4;
             lblResults.Text = "Результати:";
             lblResults.UseCompatibleTextRendering = true;
@@ -92,39 +100,43 @@
             dgvResults.AllowUserToAddRows = false;
             dgvResults.AllowUserToDeleteRows = false;
             dgvResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvResults.Location = new Point(12, 209);
+            dgvResults.Location = new Point(12, 237);
             dgvResults.Name = "dgvResults";
             dgvResults.ReadOnly = true;
             dgvResults.RowHeadersVisible = false;
             dgvResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvResults.Size = new Size(700, 180);
+            dgvResults.Size = new Size(700, 204);
             dgvResults.TabIndex = 5;
             // 
             // lblConclusion
             // 
             lblConclusion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lblConclusion.Location = new Point(12, 392);
+            lblConclusion.Location = new Point(12, 444);
             lblConclusion.Name = "lblConclusion";
-            lblConclusion.Size = new Size(700, 50);
+            lblConclusion.Size = new Size(700, 57);
             lblConclusion.TabIndex = 6;
             lblConclusion.Text = "(висновок з'явиться після тесту)";
             lblConclusion.UseCompatibleTextRendering = true;
             // 
             // btnReturn
             // 
-            btnReturn.Location = new Point(504, 8);
+            btnReturn.BackColor = Color.FromArgb(224, 224, 224);
+            btnReturn.FlatAppearance.BorderSize = 0;
+            btnReturn.FlatStyle = FlatStyle.Flat;
+            btnReturn.ForeColor = SystemColors.ControlText;
+            btnReturn.Location = new Point(504, 9);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(208, 23);
+            btnReturn.Size = new Size(208, 26);
             btnReturn.TabIndex = 7;
             btnReturn.Text = "Повернутись на головну форму";
-            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.UseVisualStyleBackColor = false;
             btnReturn.Click += btnReturn_Click;
             // 
             // BenchmarkForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 461);
+            ClientSize = new Size(734, 522);
             Controls.Add(btnReturn);
             Controls.Add(lblConclusion);
             Controls.Add(dgvResults);
@@ -133,6 +145,7 @@
             Controls.Add(btnGenerate);
             Controls.Add(txtTestData);
             Controls.Add(lblText);
+            Font = new Font("Segoe UI", 10F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "BenchmarkForm";
