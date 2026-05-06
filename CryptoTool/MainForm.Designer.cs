@@ -38,6 +38,8 @@
             btnClear = new Button();
             label1 = new Label();
             txtOutput = new TextBox();
+            btnFileCrypto = new Button();
+            btnBenchmark = new Button();
             SuspendLayout();
             // 
             // lblInput
@@ -84,7 +86,7 @@
             btnEncrypt.TabIndex = 4;
             btnEncrypt.Text = "Зашифрувати";
             btnEncrypt.UseVisualStyleBackColor = true;
-            btnEncrypt.Click += this.btnEncrypt_Click;
+            btnEncrypt.Click += btnEncrypt_Click;
             // 
             // btnDecrypt
             // 
@@ -94,7 +96,7 @@
             btnDecrypt.TabIndex = 5;
             btnDecrypt.Text = " Розшифрувати";
             btnDecrypt.UseVisualStyleBackColor = true;
-            btnDecrypt.Click += this.btnDecrypt_Click;
+            btnDecrypt.Click += btnDecrypt_Click;
             // 
             // btnHash
             // 
@@ -104,7 +106,7 @@
             btnHash.TabIndex = 6;
             btnHash.Text = "Хешувати";
             btnHash.UseVisualStyleBackColor = true;
-            btnHash.Click += this.btnHash_Click;
+            btnHash.Click += btnHash_Click;
             // 
             // btnClear
             // 
@@ -114,7 +116,7 @@
             btnClear.TabIndex = 7;
             btnClear.Text = "Очистити";
             btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += this.btnClear_Click;
+            btnClear.Click += btnClear_Click;
             // 
             // label1
             // 
@@ -135,11 +137,33 @@
             txtOutput.Size = new Size(640, 100);
             txtOutput.TabIndex = 9;
             // 
+            // btnFileCrypto
+            // 
+            btnFileCrypto.Location = new Point(12, 364);
+            btnFileCrypto.Name = "btnFileCrypto";
+            btnFileCrypto.Size = new Size(140, 23);
+            btnFileCrypto.TabIndex = 10;
+            btnFileCrypto.Text = "Робота з файлами";
+            btnFileCrypto.UseVisualStyleBackColor = true;
+            btnFileCrypto.Click += btnFileCrypto_Click;
+            // 
+            // btnBenchmark
+            // 
+            btnBenchmark.Location = new Point(158, 364);
+            btnBenchmark.Name = "btnBenchmark";
+            btnBenchmark.Size = new Size(151, 23);
+            btnBenchmark.TabIndex = 11;
+            btnBenchmark.Text = "Порівняння алгоритмів";
+            btnBenchmark.UseVisualStyleBackColor = true;
+            btnBenchmark.Click += btnBenchmark_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 461);
+            Controls.Add(btnBenchmark);
+            Controls.Add(btnFileCrypto);
             Controls.Add(txtOutput);
             Controls.Add(label1);
             Controls.Add(btnClear);
@@ -171,5 +195,7 @@
         private Button btnClear;
         private Label label1;
         private TextBox txtOutput;
+        private Button btnFileCrypto;
+        private Button btnBenchmark;
     }
 }

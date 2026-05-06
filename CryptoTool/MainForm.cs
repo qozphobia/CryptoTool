@@ -3,14 +3,10 @@ using System.Security.Cryptography;
 
 namespace CryptoTool
 {
-    
+
     public partial class MainForm : Form
     {
-        private readonly AesCipher _aes = new AesCipher();
-        private readonly DesCipher _des = new DesCipher();
-        private readonly RsaCipher _rsa = new RsaCipher();
-        private readonly Sha256Hasher _sha256 = new Sha256Hasher();
-        private readonly Md5Hasher _md5 = new Md5Hasher();
+
         public MainForm()
         {
             InitializeComponent();
@@ -29,9 +25,9 @@ namespace CryptoTool
         {
             return cmbAlgorithm.SelectedItem?.ToString() switch
             {
-                "AES" => _aes,
-                "DES" => _des,
-                "RSA" => _rsa,
+                "AES" => CryptoState.Aes,
+                "DES" => CryptoState.Des,
+                "RSA" => CryptoState.Rsa,
                 _ => null
             };
         }
@@ -40,8 +36,8 @@ namespace CryptoTool
         {
             return cmbAlgorithm.SelectedItem?.ToString() switch
             {
-                "SHA-256" => _sha256,
-                "MD5" => _md5,
+                "SHA-256" => CryptoState.Sha256,
+                "MD5" => CryptoState.Md5,
                 _ => null
             };
         }
@@ -126,6 +122,18 @@ namespace CryptoTool
         {
             txtInput.Clear();
             txtOutput.Clear();
+        }
+
+        private void btnFileCrypto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBenchmark_Click(object sender, EventArgs e)
+        {
+            Form Form1 = new BenchmarkForm();
+                        Form1.ShowDialog();
+
         }
     }
 }

@@ -12,5 +12,8 @@ namespace CryptoTool.Crypto
 
         public abstract string Encrypt(string plainText);
         public abstract string Decrypt(string cipherText);
+
+        public abstract byte[] EncryptBytes(byte[] data);
+        public abstract byte[] DecryptBytes(byte[] data);
     }
 }
