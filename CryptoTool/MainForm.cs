@@ -126,13 +126,14 @@ namespace CryptoTool
 
         private void btnFileCrypto_Click(object sender, EventArgs e)
         {
-
+            Form form = new FileCryptoForm();
+            form.ShowDialog();
         }
 
         private void btnBenchmark_Click(object sender, EventArgs e)
         {
             Form Form1 = new BenchmarkForm();
-                        Form1.ShowDialog();
+            Form1.ShowDialog();
 
         }
     }

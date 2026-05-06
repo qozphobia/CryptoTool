@@ -35,6 +35,7 @@
             lblResults = new Label();
             dgvResults = new DataGridView();
             lblConclusion = new Label();
+            btnReturn = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvResults).BeginInit();
             SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             // 
             // btnRunBenchmark
             // 
-            btnRunBenchmark.Location = new Point(504, 123);
+            btnRunBenchmark.Location = new Point(266, 123);
             btnRunBenchmark.Name = "btnRunBenchmark";
             btnRunBenchmark.Size = new Size(208, 23);
             btnRunBenchmark.TabIndex = 3;
@@ -109,11 +110,22 @@
             lblConclusion.Text = "(висновок з'явиться після тесту)";
             lblConclusion.UseCompatibleTextRendering = true;
             // 
+            // btnReturn
+            // 
+            btnReturn.Location = new Point(504, 8);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(208, 23);
+            btnReturn.TabIndex = 7;
+            btnReturn.Text = "Повернутись на головну форму";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
+            // 
             // BenchmarkForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(734, 461);
+            Controls.Add(btnReturn);
             Controls.Add(lblConclusion);
             Controls.Add(dgvResults);
             Controls.Add(lblResults);
@@ -140,5 +152,6 @@
         private Label lblResults;
         private DataGridView dgvResults;
         private Label lblConclusion;
+        private Button btnReturn;
     }
 }

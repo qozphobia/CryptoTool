@@ -64,30 +64,21 @@ namespace CryptoTool
             dgvResults.Rows.Clear();
             string testData = txtTestData.Text;
 
-            // Симетричні — багато ітерацій, повний текст.
             BenchmarkCipher(CryptoState.Aes, "Симетричний", testData, SymmetricIterations);
             BenchmarkCipher(CryptoState.Des, "Симетричний", testData, SymmetricIterations);
 
-            // RSA — мало ітерацій (повільний), короткий текст (обмеження ~190 байт).
             string rsaTestData = testData.Length > 100 ? testData.Substring(0, 100) : testData;
             BenchmarkCipher(CryptoState.Rsa, "Асиметричний", rsaTestData, AsymmetricIterations);
 
             ShowConclusion();
         }
-
-        // Універсальний метод бенчмарка для будь-якого CipherBase.
-        // Тут і працює поліморфізм: метод не знає чи це AES, DES чи RSA —
-        // звертається до абстрактного інтерфейсу.
         private void BenchmarkCipher(CipherBase cipher, string type, string data, int iterations)
         {
             try
             {
-                // Прогрів — перший виклик завжди повільніший через JIT-компіляцію
-                // та ініціалізацію криптографічного провайдера. Не міряємо.
                 string warmupResult = cipher.Encrypt(data);
                 cipher.Decrypt(warmupResult);
 
-                // Заміряємо ШИФРУВАННЯ багато разів.
                 var sw = Stopwatch.StartNew();
                 string encrypted = "";
                 for (int i = 0; i < iterations; i++)
@@ -96,12 +87,10 @@ namespace CryptoTool
                 }
                 sw.Stop();
                 double encryptMs = sw.Elapsed.TotalMilliseconds;
-                // Середній час однієї операції з точністю до мікросекунд.
                 double avgEncryptMs = encryptMs / iterations;
 
                 int outputSize = encrypted.Length;
 
-                // Заміряємо РОЗШИФРУВАННЯ.
                 sw.Restart();
                 string decrypted = "";
                 for (int i = 0; i < iterations; i++)
@@ -115,7 +104,6 @@ namespace CryptoTool
                 bool ok = decrypted == data;
                 string algoName = cipher.Name + (ok ? " ✅" : " ❌");
 
-                // F4 = форматування з 4 знаками після коми (точність до 0.0001 мс = 100 нс).
                 dgvResults.Rows.Add(
                     algoName,
                     type,
@@ -141,7 +129,6 @@ avgDecryptMs.ToString("F4", System.Globalization.CultureInfo.InvariantCulture) +
 
             foreach (DataGridViewRow row in dgvResults.Rows)
             {
-                // Парсимо обидві колонки часу і складаємо.
                 if (TryParseTime(row.Cells["EncryptTime"].Value?.ToString(), out double encTime) &&
                     TryParseTime(row.Cells["DecryptTime"].Value?.ToString(), out double decTime))
                 {
@@ -171,8 +158,6 @@ avgDecryptMs.ToString("F4", System.Globalization.CultureInfo.InvariantCulture) +
                     $"саме тому в реальних системах RSA шифрує лише AES-ключ.";
             }
         }
-
-        // Допоміжний метод — витягує число з рядка типу "0.0018 (×5000)".
         private bool TryParseTime(string? cellText, out double result)
         {
             result = 0;
@@ -183,6 +168,11 @@ avgDecryptMs.ToString("F4", System.Globalization.CultureInfo.InvariantCulture) +
                 System.Globalization.NumberStyles.Any,
                 System.Globalization.CultureInfo.InvariantCulture,
                 out result);
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
